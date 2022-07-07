@@ -10,7 +10,6 @@
     root.Blockly = factory();
   }
 }(this, function() {
-  'use strict';var Blockly={constants:{},LINE_MODE_MULTIPLIER:40,PAGE_MODE_MULTIPLIER:125,DRAG_RADIUS:5,FLYOUT_DRAG_RADIUS:10,SNAP_RADIUS:28};Blockly.CONNECTING_SNAP_RADIUS=Blockly.SNAP_RADIUS;Blockly.CURRENT_CONNECTION_PREFERENCE=8;Blockly.BUMP_DELAY=250;Blockly.BUMP_RANDOMNESS=10;Blockly.COLLAPSE_CHARS=30;Blockly.LONGPRESS=750;Blockly.SOUND_LIMIT=100;Blockly.DRAG_STACK=!0;Blockly.HSV_SATURATION=.45;Blockly.HSV_VALUE=.65;Blockly.SPRITE={width:96,height:124,url:"sprites.png"};Blockly.INPUT_VALUE=1;
   /*
 
  Copyright 2016 Google LLC
