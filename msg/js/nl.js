@@ -96,6 +96,7 @@ Blockly.Msg["LEAPHY_BUZZ_MS"] = "ms";  // untranslated
 Blockly.Msg["LEAPHY_CLICK_CATEGORY"] = "Leaphy Click";  // untranslated
 Blockly.Msg["LEAPHY_DIGITAL_READ"] = "Lees digipin";
 Blockly.Msg["LEAPHY_DISPLAY_CLEAR"] = "Maak display leeg";
+Blockly.Msg["LEAPHY_DRAW_BITMAP"] = "Teken bitmap X: %1 Y: %2 Pad naar foto: %3 Kleur 0/1: %4"; // also mention the vars
 Blockly.Msg["LEAPHY_DISPLAY_DISPLAY"] = "Toon op display";
 Blockly.Msg["LEAPHY_DISPLAY_PRINT"] = "Stel display in - Rg.";
 Blockly.Msg["LEAPHY_EXTRA_CATEGORY"] = "Leaphy Extra";  // untranslated

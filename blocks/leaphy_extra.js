@@ -110,48 +110,6 @@ const blocks = createBlockDefinitionsFromJsonArray([
     'helpUrl': '',
   },
   {
-    "type": "leaphy_display_draw_bitmap",
-    "message0": "X: %1 Y: %2 %3 %4 %5 %6",
-    "args0": [
-      {
-        "type": "input_value",
-        "name": "x",
-        "check": "Number"
-      },
-      {
-        "type": "input_value",
-        "name": "y",
-        "check": "Number"
-      },
-      {
-        "type": "field_label_serializable",
-        "name": "path",
-        "text": "Foto pad:"
-      },
-      {
-        "type": "input_value",
-        "name": "path",
-        "check": "String"
-      },
-      {
-        "type": "field_label_serializable",
-        "name": "color",
-        "text": "Color 0/1: "
-      },
-      {
-        "type": "input_value",
-        "name": "NAME",
-        "check": "Number"
-      }
-    ],
-    "inputsInline": true,
-    "previousStatement": null,
-    "nextStatement": null,
-    "colour": 240,
-    "tooltip": "",
-    "helpUrl": ""
-  },
-  {
     'type': 'leaphy_led_set_basic',
     'message0':
         '%%{BKY_LEAPHY_LED_BASIC_LED} %1 %%{BKY_LEAPHY_LED_BASIC_RED} %2 %%{BKY_LEAPHY_LED_BASIC_GREEN} %3 %%{BKY_LEAPHY_LED_BASIC_BLUE} %4',
@@ -295,6 +253,37 @@ const blocks = createBlockDefinitionsFromJsonArray([
   {
     'type': 'leaphy_display_clear',
     'message0': '%%{BKY_LEAPHY_DISPLAY_CLEAR}',
+    'previousStatement': null,
+    'nextStatement': null,
+    'style': 'leaphy_blocks',
+    'tooltip': '',
+    'helpUrl': '',
+  },
+  {
+    "type": "leaphy_display_draw_bitmap",
+    "message0": "%%{BKY_LEAPHY_DRAW_BITMAP}",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "x",
+        "check": "Number"
+      },
+      {
+        "type": "input_value",
+        "name": "y",
+        "check": "Number"
+      },
+      {
+        "type": "input_value",
+        "name": "path",
+        "check": "String"
+      },
+      {
+        "type": "input_value",
+        "name": "NAME",
+        "check": "Number"
+      }
+    ],
     'previousStatement': null,
     'nextStatement': null,
     'style': 'leaphy_blocks',
