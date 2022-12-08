@@ -109,6 +109,10 @@ const blocks = createBlockDefinitionsFromJsonArray([
     'tooltip': '',
     'helpUrl': '',
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 3219f33d4c6e5f4c660421ea28d3b4d7c5a42be2
   {
     'type': 'leaphy_led_set_basic',
     'message0':
@@ -261,7 +265,11 @@ const blocks = createBlockDefinitionsFromJsonArray([
   },
   {
     "type": "leaphy_display_draw_bitmap",
+<<<<<<< HEAD
     "message0": "%%{BKY_LEAPHY_DRAW_BITMAP}",
+=======
+    "message0": "%%{BKY_LEAPHY_DISPLAY_DRAW_BITMAP}",
+>>>>>>> 3219f33d4c6e5f4c660421ea28d3b4d7c5a42be2
     "args0": [
       {
         "type": "input_value",
@@ -274,21 +282,45 @@ const blocks = createBlockDefinitionsFromJsonArray([
         "check": "Number"
       },
       {
+<<<<<<< HEAD
+=======
+        "type": "field_label_serializable",
+        "name": "path",
+        "text": "Foto pad:"
+      },
+      {
+>>>>>>> 3219f33d4c6e5f4c660421ea28d3b4d7c5a42be2
         "type": "input_value",
         "name": "path",
         "check": "String"
       },
       {
+<<<<<<< HEAD
+=======
+        "type": "field_label_serializable",
+        "name": "color",
+        "text": "Color 0/1: "
+      },
+      {
+>>>>>>> 3219f33d4c6e5f4c660421ea28d3b4d7c5a42be2
         "type": "input_value",
         "name": "NAME",
         "check": "Number"
       }
     ],
+<<<<<<< HEAD
     'previousStatement': null,
     'nextStatement': null,
     'style': 'leaphy_blocks',
     'tooltip': '',
     'helpUrl': '',
+=======
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "tooltip": "",
+    "helpUrl": ""
+>>>>>>> 3219f33d4c6e5f4c660421ea28d3b4d7c5a42be2
   },
   {
     'type': 'leaphy_display_display',
