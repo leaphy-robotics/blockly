@@ -265,11 +265,7 @@ const blocks = createBlockDefinitionsFromJsonArray([
   },
   {
     "type": "leaphy_display_draw_bitmap",
-<<<<<<< HEAD
     "message0": "%%{BKY_LEAPHY_DRAW_BITMAP}",
-=======
-    "message0": "%%{BKY_LEAPHY_DISPLAY_DRAW_BITMAP}",
->>>>>>> 3219f33d4c6e5f4c660421ea28d3b4d7c5a42be2
     "args0": [
       {
         "type": "input_value",
