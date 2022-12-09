@@ -15,37 +15,37 @@ goog.module('Blockly.Arduino.leaphyExtra');
  
 const { arduinoGenerator: Arduino } = goog.require('Blockly.Arduino');
 
-function GenerateBitmap(path) {
-    if (typeof path !== 'string') {
-        throw new Error('Path must be a string');
-    }
-
-    var fs = require('fs');
-    var bitmap = fs.readFileSync(path);
-    if (bitmap.length > 8192) {
-        bitmap = bitmap.slice(0, 8192);
-    }
-
-    var filename = path;
-    filename = filename.slice(filename.lastIndexOf("\\") + 1, filename.length);
-    filename = filename.slice(0, filename.lastIndexOf("."));
-
-    // create custom name add name of image
-    var array = 'const unsigned char bitmap_' + filename + '[] = {';
-    for (var i = 0; i < bitmap.length; i += 2) {
-        // if white make black
-        // anythign else make white
-        if (bitmap[i] == 0) {
-            array += '0x00,';
-        } else {
-            array += '0xFF,';
-        }
-    }
-    array = array.slice(0, -1);
-    array += '};';
-    
-    return array;
-}
+//function GenerateBitmap(path) {
+//    if (typeof path !== 'string') {
+//        throw new Error('Path must be a string');
+//    }
+//
+//    var fs = require('fs');
+//    var bitmap = fs.readFileSync(path);
+//    if (bitmap.length > 8192) {
+//        bitmap = bitmap.slice(0, 8192);
+//    }
+//
+//    var filename = path;
+//    filename = filename.slice(filename.lastIndexOf("\\") + 1, filename.length);
+//    filename = filename.slice(0, filename.lastIndexOf("."));
+//
+//    // create custom name add name of image
+//    var array = 'const unsigned char bitmap_' + filename + '[] = {';
+//    for (var i = 0; i < bitmap.length; i += 2) {
+//        // if white make black
+//        // anythign else make white
+//        if (bitmap[i] == 0) {
+//            array += '0x00,';
+//        } else {
+//            array += '0xFF,';
+//        }
+//    }
+//    array = array.slice(0, -1);
+//    array += '};';
+//    
+//    return array;
+//}
 
 var includeDefinition = '#include "Adafruit_TCS34725.h"';
 var variablesDefinition = 'Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_24MS, TCS34725_GAIN_16X);\nuint16_t RawColor_Red, RawColor_Green, RawColor_Blue, RawColor_Clear;\nbyte Color_Red, Color_Green, Color_Blue, Color_Clear;\n';
@@ -264,7 +264,9 @@ Arduino['leaphy_display_draw_bitmap'] = function(block) {
     var filename = path;
     filename = filename.slice(filename.lastIndexOf("\\") + 1, filename.length);
     filename = filename.slice(0, filename.lastIndexOf("."));
-    var a = GenerateBitmap(value_path);
+    //var a = GenerateBitmap(value_path);
+
+    var a = 'const unsigned char bitmap_' + filename + '[] PROGMEM = {';
 
     Arduino.definitions["define_bitmap_"  + value_path] = a;
 

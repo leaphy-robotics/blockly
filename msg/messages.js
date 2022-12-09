@@ -243,6 +243,8 @@ Blockly.Msg.LEAPHY_DISPLAY_CLEAR = 'Clear display';
 Blockly.Msg.LEAPHY_DISPLAY_PRINT = 'Display - Set Ln.';
 /** @type {string} */
 /// Print display
+Blockly.Msg.LEAPHY_DRAW_BITMAP = 'Display %1 %2 %3 %4';
+
 Blockly.Msg.LEAPHY_DISPLAY_DISPLAY = 'Show on display';
 
 /** @type {string} */
