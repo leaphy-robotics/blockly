@@ -275,19 +275,9 @@ const blocks = createBlockDefinitionsFromJsonArray([
         "check": "Number"
       },
       {
-        "type": "field_label_serializable",
-        "name": "path",
-        "text": "Foto pad:"
-      },
-      {
         "type": "input_value",
         "name": "path",
         "check": "String"
-      },
-      {
-        "type": "field_label_serializable",
-        "name": "color",
-        "text": "Color 0/1: "
       },
       {
         "type": "input_value",
