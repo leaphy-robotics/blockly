@@ -20,3 +20,4 @@ chromedriver
 build/
 dist/
 temp/
+yarn.lock

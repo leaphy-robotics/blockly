@@ -109,7 +109,6 @@ const blocks = createBlockDefinitionsFromJsonArray([
     'tooltip': '',
     'helpUrl': '',
   },
-  
   {
     'type': 'leaphy_led_set_basic',
     'message0':
@@ -262,7 +261,7 @@ const blocks = createBlockDefinitionsFromJsonArray([
   },
   {
     "type": "leaphy_display_draw_bitmap",
-    "message0": "%%{BKY_LEAPHY_DISPLAY_DRAW_BITMAP}",
+    "message0": "%%{BKY_LEAPHY_DRAW_BITMAP}",
     "args0": [
       {
         "type": "input_value",
@@ -285,11 +284,11 @@ const blocks = createBlockDefinitionsFromJsonArray([
         "check": "Number"
       }
     ],
-    "inputsInline": true,
-    "previousStatement": null,
-    "nextStatement": null,
-    "tooltip": "",
-    "helpUrl": ""
+    'previousStatement': null,
+    'nextStatement': null,
+    'style': 'leaphy_blocks',
+    'tooltip': '',
+    'helpUrl': '',
   },
   {
     'type': 'leaphy_display_display',
