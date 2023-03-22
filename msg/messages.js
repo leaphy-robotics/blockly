@@ -106,6 +106,8 @@ Blockly.Msg.LEAPHY_ANALOG_READ = 'Read anapin';
 /** @type {string} */
 /// leaphy Read RGB Sensor.
 Blockly.Msg.LEAPHY_RGB_READ_SENSOR = 'Read RGB sensor';
+// update lsm303agr
+Blockly.Msg.
 /** @type {string} */
 /// leaphy color r-255
 Blockly.Msg.LEAPHY_RGB_COLOR_RED = 'Color R-255';

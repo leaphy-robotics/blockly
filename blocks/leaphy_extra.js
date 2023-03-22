@@ -340,6 +340,16 @@ const blocks = createBlockDefinitionsFromJsonArray([
     'tooltip': '',
     'helpUrl': '',
   },
+  {
+    // add new lsm compass sensor
+    'type': 'leaphy_use_lsm303agr_compass',
+    'message0': 'Update Lsm303agr Compass',
+    'previousStatement': null,
+    'nextStatement': null,
+    'style': 'leaphy_blocks',
+    'tooltip': '',
+    'helpUrl': '',
+  }
 ]);
 
 exports.blocks = blocks;

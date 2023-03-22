@@ -257,3 +257,14 @@ Arduino['leaphy_use_lsm9ds1'] = function(block) {
     Arduino.addSetup("lsm9ds1_setup', 'void setup()  \n{ \n  Serial.begin(115200); \n \n  while (!Serial) { \n    delay(1); // will pause Zero, Leonardo, etc until serial console opens \n  } \n   \n  Serial.println('LSM9DS1 data read demo'); \n   \n  // Try to initialise and warn if we couldn't detect the chip \n  if (!lsm.begin()) \n  { \n    Serial.println('Oops ... unable to initialize the LSM9DS1. Check your wiring!'); \n    while (1); \n  } \n  Serial.println('Found LSM9DS1 9DOF'); \n \n  // helper to just set the default scaling we want, see above! \n  setupSensor(); \n}");
     return [sensor + axis, Arduino.ORDER_ATOMIC]
 }
+
+Arduino['leaphy_use_lsm303agr_compass'] = function(block) {
+    Arduino.addInclude('adafruit_lsm303agr', '#include <LSM303AGR.h>');
+    Arduino.addDeclaration('lsm303agr_declaration', 'CompassSensor lsm303;\n');
+    Arduino.addSetup("lsm9ds1_setup", "lsm303.begin();\n");
+    return "  lsm303.read();\n"
+}
+
+Arduino['leaphy_use_lsm303agr_compass_update'] = function(block) {
+    
+}
