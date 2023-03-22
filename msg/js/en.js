@@ -98,6 +98,7 @@ Blockly.Msg["LEAPHY_DIGITAL_READ"] = "Read digipin";
 Blockly.Msg["LEAPHY_DISPLAY_CLEAR"] = "Clear display";
 Blockly.Msg["LEAPHY_DISPLAY_DISPLAY"] = "Show on display";
 Blockly.Msg["LEAPHY_DISPLAY_PRINT"] = "Display - Set Ln.";
+Blockly.Msg["LEAPHY_DRAW_BITMAP"] = "Display %1 %2 %3 %4";
 Blockly.Msg["LEAPHY_EXTRA_CATEGORY"] = "Leaphy Extra";
 Blockly.Msg["LEAPHY_FLITZ_CATEGORY"] = "Leaphy Flitz";
 Blockly.Msg["LEAPHY_FLITZ_LED"] = "Set LED";

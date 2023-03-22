@@ -9,9 +9,43 @@
  */
  'use strict';
 
+
+
 goog.module('Blockly.Arduino.leaphyExtra');
  
 const { arduinoGenerator: Arduino } = goog.require('Blockly.Arduino');
+
+//function GenerateBitmap(path) {
+//    if (typeof path !== 'string') {
+//        throw new Error('Path must be a string');
+//    }
+//
+//    var fs = require('fs');
+//    var bitmap = fs.readFileSync(path);
+//    if (bitmap.length > 8192) {
+//        bitmap = bitmap.slice(0, 8192);
+//    }
+//
+//    var filename = path;
+//    filename = filename.slice(filename.lastIndexOf("\\") + 1, filename.length);
+//    filename = filename.slice(0, filename.lastIndexOf("."));
+//
+//    // create custom name add name of image
+//    var array = 'const unsigned char bitmap_' + filename + '[] = {';
+//    for (var i = 0; i < bitmap.length; i += 2) {
+//        // if white make black
+//        // anythign else make white
+//        if (bitmap[i] == 0) {
+//            array += '0x00,';
+//        } else {
+//            array += '0xFF,';
+//        }
+//    }
+//    array = array.slice(0, -1);
+//    array += '};';
+//    
+//    return array;
+//}
 
 var includeDefinition = '#include "Adafruit_TCS34725.h"';
 var variablesDefinition = 'Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_24MS, TCS34725_GAIN_16X);\nuint16_t RawColor_Red, RawColor_Green, RawColor_Blue, RawColor_Clear;\nbyte Color_Red, Color_Green, Color_Blue, Color_Clear;\n';
@@ -125,6 +159,8 @@ Arduino['leaphy_servo_write'] = function (block) {
     return code;
 };
 
+
+
 /**
  * Code generator to read an angle value from a servo pin (X).
  * Arduino code: #include <Servo.h>
@@ -215,6 +251,28 @@ Arduino['leaphy_display_clear'] = function(block) {
     var code = 'display.clearDisplay();\n';
     return code;
 };
+
+Arduino['leaphy_display_draw_bitmap'] = function(block) {
+    var value_x = Blockly.Arduino.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_path = Blockly.JavaScript.valueToCode(block, 'path', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+    
+    // Add an include for the library.
+    addDisplaySetupCode();
+
+    var filename = path;
+    filename = filename.slice(filename.lastIndexOf("\\") + 1, filename.length);
+    filename = filename.slice(0, filename.lastIndexOf("."));
+    //var a = GenerateBitmap(value_path);
+
+    var a = 'const unsigned char bitmap_' + filename + '[] PROGMEM = {';
+
+    Arduino.definitions["define_bitmap_"  + value_path] = a;
+
+    var code = 'display.drawBitmap(' + value_x + ', ' + value_y + ', '  + ', bitmap_' + filename + ', ' + value_name + ');\n';
+    return code;
+  };
 
 Arduino['leaphy_display_print_line'] = function(block) {
     addDisplaySetupCode();

@@ -260,6 +260,37 @@ const blocks = createBlockDefinitionsFromJsonArray([
     'helpUrl': '',
   },
   {
+    "type": "leaphy_display_draw_bitmap",
+    "message0": "%%{BKY_LEAPHY_DRAW_BITMAP}",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "x",
+        "check": "Number"
+      },
+      {
+        "type": "input_value",
+        "name": "y",
+        "check": "Number"
+      },
+      {
+        "type": "input_value",
+        "name": "path",
+        "check": "String"
+      },
+      {
+        "type": "input_value",
+        "name": "NAME",
+        "check": "Number"
+      }
+    ],
+    'previousStatement': null,
+    'nextStatement': null,
+    'style': 'leaphy_blocks',
+    'tooltip': '',
+    'helpUrl': '',
+  },
+  {
     'type': 'leaphy_display_display',
     'message0': '%%{BKY_LEAPHY_DISPLAY_DISPLAY}',
     'previousStatement': null,

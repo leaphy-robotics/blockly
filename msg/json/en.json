@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2022-10-13 11:36:24.979208",
+		"lastupdated": "2022-12-09 15:39:39.716626",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -74,6 +74,7 @@
 	"LEAPHY_SERIAL_PRINT": "Show on screen",
 	"LEAPHY_DISPLAY_CLEAR": "Clear display",
 	"LEAPHY_DISPLAY_PRINT": "Display - Set Ln.",
+	"LEAPHY_DRAW_BITMAP": "Display %1 %2 %3 %4",
 	"LEAPHY_DISPLAY_DISPLAY": "Show on display",
 	"LEAPHY_SITUATION_CATEGORY": "Thinkflow",
 	"LEAPHY_NUMBERS_CATEGORY": "Numbers",
