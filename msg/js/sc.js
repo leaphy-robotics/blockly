@@ -98,6 +98,7 @@ Blockly.Msg["LEAPHY_DIGITAL_READ"] = "Read digipin";  // untranslated
 Blockly.Msg["LEAPHY_DISPLAY_CLEAR"] = "Clear display";  // untranslated
 Blockly.Msg["LEAPHY_DISPLAY_DISPLAY"] = "Show on display";  // untranslated
 Blockly.Msg["LEAPHY_DISPLAY_PRINT"] = "Display - Set Ln.";  // untranslated
+Blockly.Msg["LEAPHY_DRAW_BITMAP"] = "Display %1 %2 %3 %4";  // untranslated
 Blockly.Msg["LEAPHY_EXTRA_CATEGORY"] = "Leaphy Extra";  // untranslated
 Blockly.Msg["LEAPHY_FLITZ_CATEGORY"] = "Leaphy Flitz";  // untranslated
 Blockly.Msg["LEAPHY_FLITZ_LED"] = "Set LED";  // untranslated

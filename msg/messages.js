@@ -106,6 +106,8 @@ Blockly.Msg.LEAPHY_ANALOG_READ = 'Read anapin';
 /** @type {string} */
 /// leaphy Read RGB Sensor.
 Blockly.Msg.LEAPHY_RGB_READ_SENSOR = 'Read RGB sensor';
+// update lsm303agr
+Blockly.Msg.
 /** @type {string} */
 /// leaphy color r-255
 Blockly.Msg.LEAPHY_RGB_COLOR_RED = 'Color R-255';
@@ -241,6 +243,9 @@ Blockly.Msg.LEAPHY_DISPLAY_CLEAR = 'Clear display';
 /** @type {string} */
 /// Set display
 Blockly.Msg.LEAPHY_DISPLAY_PRINT = 'Display - Set Ln.';
+/** @type {string} */
+/// Draw Bitmap
+//Blockly.Msg.LEAPHY_DRAW_BITMAP = 'Display %1 %2 %3 %4';
 /** @type {string} */
 /// Print display
 Blockly.Msg.LEAPHY_DISPLAY_DISPLAY = 'Show on display';
