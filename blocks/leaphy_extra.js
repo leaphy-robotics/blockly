@@ -204,7 +204,7 @@ const blocks = createBlockDefinitionsFromJsonArray([
     'message0': '%%{BKY_ARD_DIGITALWRITE} %1 %%{BKY_ARD_WRITE_TO} %2',
     'args0': [
       {'type': 'field_dropdown', 'name': 'PIN', 'options': digitalPinOptions},
-      {'type': 'input_value', 'name': 'NAME', 'check': 'Boolean'},
+      {'type': 'input_value', 'name': 'STATE', 'check': 'Boolean'},
     ],
     'inputsInline': true,
     'previousStatement': null,
