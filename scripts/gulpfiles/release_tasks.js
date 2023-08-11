@@ -104,7 +104,6 @@ function checkReleaseDir(done) {
 // Check with the user that the version number is correct, then login and publish to npm.
 function loginAndPublish_(done, isBeta) {
   var { version } = getPackageJson();
-  execSync(`npm login`, {stdio: 'inherit'});
   execSync(`npm publish ${isBeta ? '--tag beta' : ''}`, {cwd: RELEASE_DIR, stdio: 'inherit'});
   done();
 }
