@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - v*
+  workflow_dispatch: {}
 
 jobs:
   publish:
@@ -25,5 +26,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: |
-          echo "//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}" > ~/.npmrc
+          npm set "//registry.npmjs.org/:_authToken" "${{ secrets.NPM_AUTH_TOKEN }}"
           npm run publish
