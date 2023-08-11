@@ -20,3 +20,6 @@ chromedriver
 build/
 dist/
 temp/
+
+# ignore all files that end with compressed.js
+*_compressed.js
