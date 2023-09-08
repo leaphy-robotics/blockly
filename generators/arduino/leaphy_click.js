@@ -17,6 +17,11 @@ Arduino['leaphy_click_rgb_digitalwrite'] = function (block) {
     var pin1 = block.getFieldValue('PIN1');
     var state1Output = Arduino.valueToCode(
         block, 'STATE1', Arduino.ORDER_ATOMIC) || 'LOW';
+    if (state1Output == 'true'){
+        state1Output = 'HIGH';
+    } else {
+        state1Output = 'LOW';
+    }
 
     Arduino.reservePin(
         block, pin1, Arduino.PinTypes.OUTPUT, 'Digital Write');
@@ -27,7 +32,12 @@ Arduino['leaphy_click_rgb_digitalwrite'] = function (block) {
     var pin2 = block.getFieldValue('PIN2');
     var state2Output = Arduino.valueToCode(
         block, 'STATE2', Arduino.ORDER_ATOMIC) || 'LOW';
-
+    
+    if (state2Output == 'true'){
+        state2Output = 'HIGH';
+    } else {
+        state2Output = 'LOW';
+    }
     Arduino.reservePin(
         block, pin2, Arduino.PinTypes.OUTPUT, 'Digital Write');
 
@@ -38,6 +48,11 @@ Arduino['leaphy_click_rgb_digitalwrite'] = function (block) {
     var state3Output = Arduino.valueToCode(
         block, 'STATE3', Arduino.ORDER_ATOMIC) || 'LOW';
 
+    if (state3Output == 'true'){
+        state3Output = 'HIGH';
+    } else {
+        state3Output = 'LOW';
+    }
     Arduino.reservePin(
         block, pin3, Arduino.PinTypes.OUTPUT, 'Digital Write');
 

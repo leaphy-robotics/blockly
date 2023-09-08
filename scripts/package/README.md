@@ -1,77 +1,30 @@
-# Blockly
+# Leaphy Blockly
 
-Google's Blockly is a web-based, visual programming editor.  Users can drag
-blocks together to build programs.  All code is free and open source.
+Leaphy Blockly is an adaptation of the Blockly library. [Google's Blockly](https://github.com/google/blockly) is a library that adds a visual code editor to web and mobile apps. The Blockly editor uses interlocking, graphical blocks to represent code concepts like variables, logical expressions, loops, and more. It allows users to apply programming principles without having to worry about syntax or the intimidation of a blinking cursor on the command line.  All code is free and open source.
 
-The source for this module is in the [Blockly repo](http://github.com/google/blockly).
-
-## Installation
-
-You can install this package either via ``npm`` or ``unpkg``.
-
-### npm
-```bash
-npm install blockly
-```
-
-### unpkg
-```html
-<script src="https://unpkg.com/blockly/blockly.min.js"></script>
-```
-
-## Example Usage
-
-```js
-import Blockly from 'blockly';
-Blockly.inject('blocklyDiv', {
-    ...
-})
-```
-
-## Samples
-
-For samples on how to integrate Blockly into your project, view the list of samples at [blockly-samples](https://github.com/google/blockly-samples).
+Leaphy Blockly is primarily developed for use in the [Leaphy Easybloqs](https://github.com/leaphy-robotics/leaphy-client) application. It is published as an npm package.
 
 
-### Importing Blockly
+## Getting Help
 
-When you import Blockly with ``import * as Blockly from 'blockly';`` you'll get the default modules:
-Blockly core, Blockly built-in blocks, the JavaScript generator and the English lang files. 
+* Ask for help on the Leaphy Forum
+* Report an Issue on Github
 
-If you need more flexibility, you'll want to define your imports more carefully: 
+## Contributing to Leaphy Blockly
 
-#### Blockly Core
+### Creating Custom Blocks
 
-```js
-import * as Blockly from 'blockly/core';
-```
+Good documentation about creating custom blocks exists in the [Google Blockly Developer Pages](https://developers.google.com/blockly/guides/create-custom-blocks/overview).
 
-#### Blockly built in blocks
-
-```js
-import * as libraryBlocks from  'blockly/blocks';
-```
-
-#### Blockly Generators
-If your application needs to generate code from the Blockly blocks, you'll want to include a generator.
-
-```js
-import {pythonGenerator} from 'blockly/python';
-```
-to include the Python generator. You can also import `{javascriptGenerator} from 'blockly/javascript'`, `{phpGenerator} from 'blockly/php'`, `{dartGenerator} from 'blockly/dart'` and `{luaGenerator} from 'blockly/lua'`.
-
-#### Blockly Languages
-
-```js
-import * as Fr from 'blockly/msg/fr';
-Blockly.setLocale(Fr);
-```
-
-To import the French lang files. Once you've imported the specific lang module, you'll also want to set the locale in Blockly.
-
-For a full list of supported Blockly locales, see: [https://github.com/google/blockly/tree/master/msg/js](https://github.com/google/blockly/tree/master/msg/js)
+### Fix a Bug
 
 
-## License
 
-Apache 2.0
+## Syncing with Google Blockly
+
+Google Blockly typically releases a new version of Blockly once a quarter (every 3 months), or when a breaking bug needs an immediate fix. The Leaphy Blockly fork will be synced with those releases when they occur.
+
+## Release Process
+
+
+Use `yarn publish` and NOT `yarn run publish` to publish a new version of the npm package

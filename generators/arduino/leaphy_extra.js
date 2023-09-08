@@ -154,8 +154,12 @@ Arduino['leaphy_servo_read'] = function (block) {
 
 Arduino['leaphy_io_digitalwrite'] = function (block) {
     var pin = block.getFieldValue('PIN');
-    var stateOutput = Arduino.valueToCode(
-        block, 'STATE', Arduino.ORDER_ATOMIC) || 'LOW';
+    var stateOutput = Arduino.valueToCode(block, 'STATE', Arduino.ORDER_ATOMIC) || 'false';
+    if (stateOutput == 'true'){
+        stateOutput = 'HIGH';
+    } else {
+        stateOutput = 'LOW';
+    }
 
     Arduino.reservePin(
         block, pin, Arduino.PinTypes.OUTPUT, 'Digital Write');

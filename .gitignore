@@ -4,6 +4,7 @@ build-debug.log
 .DS_Store
 .settings
 .project
+.idea
 *.gz
 *.pyc
 *.komodoproject
@@ -20,3 +21,7 @@ chromedriver
 build/
 dist/
 temp/
+
+# ignore all files that end with compressed.js
+*_compressed.js
+*_compressed.js.map

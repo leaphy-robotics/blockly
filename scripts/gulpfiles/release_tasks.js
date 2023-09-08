@@ -104,13 +104,8 @@ function checkReleaseDir(done) {
 // Check with the user that the version number is correct, then login and publish to npm.
 function loginAndPublish_(done, isBeta) {
   var { version } = getPackageJson();
-  if(readlineSync.keyInYN(`You are about to publish blockly with the version number:${version}. Do you want to continue?`)) {
-    execSync(`npm login`, {stdio: 'inherit'});
-    execSync(`npm publish ${isBeta ? '--tag beta' : ''}`, {cwd: RELEASE_DIR, stdio: 'inherit'});
-    done();
-  } else {
-    done(new Error('User quit due to the version number not being correct.'));
-  }
+  execSync(`npm publish --access public`, {cwd: RELEASE_DIR, stdio: 'inherit'});
+  done();
 }
 
 // Login and publish.
@@ -159,7 +154,6 @@ const rebuildAll = gulp.series(
 const publish = gulp.series(
   rebuildAll,
   packageTasks.package,
-  checkBranch,
   checkReleaseDir,
   loginAndPublish
 );
