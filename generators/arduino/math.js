@@ -187,7 +187,7 @@ Arduino['math_number_property'] = function (block) {
     var code;
     if (dropdown_property == 'PRIME') {
         var func = [
-            'boolean ' + Arduino.DEF_FUNC_NAME + '(int n) {',
+            'boolean mathIsPrime(int n) {',
             '  // https://en.wikipedia.org/wiki/Primality_test#Naive_methods',
             '  if (n == 2 || n == 3) {',
             '    return true;',
@@ -206,9 +206,9 @@ Arduino['math_number_property'] = function (block) {
             '  }',
             '  return true;',
             '}'];
-        var funcName = Arduino.addFunction('mathIsPrime', func.join('\n'));
+        Arduino.addDeclaration("mathIsPrime", func.join('\n'))
         Arduino.addInclude('math', '#include <math.h>');
-        code = funcName + '(' + number_to_check + ')';
+        code = 'mathIsPrime(' + number_to_check + ')';
         return [code, Arduino.ORDER_UNARY_POSTFIX];
     }
     switch (dropdown_property) {
@@ -315,11 +315,8 @@ Arduino['math_random_int'] = function (block) {
         Arduino.ORDER_NONE) || '0';
     var argument1 = Arduino.valueToCode(block, 'TO',
         Arduino.ORDER_NONE) || '0';
-    var functionName = Arduino.nameDB_.getDistinctName(
-        'math_random_int', NameType.PROCEDURE);
-    Arduino.math_random_int.random_function = functionName;
     var func = [
-        'int ' + Arduino.DEF_FUNC_NAME + '(int min, int max) {',
+        'int mathRandomInt(int min, int max) {',
         '  if (min > max) {',
         '    // Swap min and max to ensure min is smaller.',
         '    int temp = min;',
@@ -328,8 +325,9 @@ Arduino['math_random_int'] = function (block) {
         '  }',
         '  return min + (rand() % (max - min + 1));',
         '}'];
-    var funcName = Arduino.addFunction('mathRandomInt', func.join('\n'));
-    var code = funcName + '(' + argument0 + ', ' + argument1 + ')';
+    Arduino.addDeclaration('mathRandomInt', func.join('\n'));
+    Arduino.addSetup('random_seed', 'randomSeed(analogRead(0));')
+    var code = 'mathRandomInt(' + argument0 + ', ' + argument1 + ')';
     return [code, Arduino.ORDER_UNARY_POSTFIX];
 };
 
