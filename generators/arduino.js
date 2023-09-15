@@ -160,6 +160,13 @@ Arduino.init = function (workspace) {
   this.setups_ = Object.create(null);
   // Create a dictionary of pins to check if their use conflicts
   this.pins_ = Object.create(null);
+  // Create a dictionary of functions from the code generator
+  this.codeFunctions_ = Object.create(null);
+  // Create a dictionary of functions created by the user
+  this.userFunctions_ = Object.create(null);
+  // Create a dictionary mapping desired function names in definitions_
+  // to actual function names (to avoid collisions with user functions)
+  this.functionNames_ = Object.create(null);
 
   this.isInitialized = true;
 };
