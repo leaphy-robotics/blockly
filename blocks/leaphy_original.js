@@ -141,6 +141,17 @@ const blocks = createBlockDefinitionsFromJsonArray([
     'tooltip': '',
     'helpUrl': '',
   },
+  {
+    'type': 'leaphy_original_analog_read_nano',
+    'message0': '%%{BKY_LEAPHY_ANALOG_READ} %1',
+    'args0': [
+      {'type': 'field_dropdown', 'name': 'PIN', 'options': analogPinOptions},
+    ],
+    'style': 'leaphy_blocks',
+    'output': 'Number',
+    'tooltip': '',
+    'helpUrl': '',
+  },
 ]);
 exports.blocks = blocks;
 
