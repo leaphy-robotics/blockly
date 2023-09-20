@@ -50,6 +50,12 @@ Blockly.Msg.LEAPHY_UNO_CATEGORY = 'Arduino Uno';
 /// leaphy Extra Category title - The text that appears in the Leaphy Extra Category.
 Blockly.Msg.LEAPHY_EXTRA_CATEGORY = 'Leaphy Extra';
 /** @type {string} */
+/// leaphy Extra Category title - The text that appears in the Leaphy Extra Category.
+Blockly.Msg.SENSOREN_CATEGORY = 'Sensors';
+/** @type {string} */
+/// leaphy Extra Category title - The text that appears in the Leaphy Extra Category.
+Blockly.Msg.ACTUATOREN_CATEGORY = 'Actuators';
+/** @type {string} */
 /// leaphy Motor Forward.
 Blockly.Msg.LEAPHY_MOTOR_FORWARD = 'Forward';
 /** @type {string} */

@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2022-10-13 11:36:24.979208",
+		"lastupdated": "2023-09-20 17:14:02.518234",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -11,6 +11,8 @@
 	"LEAPHY_FLITZ_CATEGORY": "Leaphy Flitz",
 	"LEAPHY_UNO_CATEGORY": "Arduino Uno",
 	"LEAPHY_EXTRA_CATEGORY": "Leaphy Extra",
+	"SENSOREN_CATEGORY": "Sensors",
+	"ACTUATOREN_CATEGORY": "Actuators",
 	"LEAPHY_MOTOR_FORWARD": "Forward",
 	"LEAPHY_MOTOR_BACKWARD": "Backward",
 	"LEAPHY_MOTOR_LEFT": "Left",
